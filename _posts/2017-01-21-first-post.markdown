@@ -8,6 +8,6 @@ categories: main
 # This is my first post
 Trying Markdown
 
-- First\
-- Second\
-- Third}
+- First
+- Second
+- Third
