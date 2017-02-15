@@ -15,5 +15,5 @@ theme: jekyll-theme-cayman # to use css from the original theme
 #   - jekyll-paginate
 #
 # #Others
-# markdown: kramdown
+markdown: kramdown
 
