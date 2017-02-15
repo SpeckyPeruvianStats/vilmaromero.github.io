@@ -8,7 +8,7 @@ categories: main
 In this post, I would like to introduce a customized **`ggplot2`** graphic that I did for my master dissertation. Basically, the plot will display how each latent ability found for Theory of Mind is affected by all the other abilities at previous times (we have information for three times). The process to find the latent abilities is not the main interest of the post, but it could be the topic for the next post :D. So let's get back to the point.
 {: .text-justify}
 
-### Data ([Click here for the data](https://github.com/VilmaRomero/vilmaromero.github.io/blob/master/data/data_causal.txt))
+### Data ([Click here for the data](/data/))
 
 To obtain the data used for the path diagram, I employed a classical linear approach. Each latent ability at time 2 was regressed with all the abilities at time 1 including itself. Similarly, it was done for time 3 against time 2. Only the significant relations of each regression (p-value&lt;0.05) were stored.
 {: .text-justify}
