@@ -3,6 +3,7 @@ layout: post
 title:  "Causal Diagram"
 date:   2017-02-14
 categories: main
+comments: true
 ---
 
 In this post, I would like to introduce a customized **`ggplot2`** graphic that I did for my master dissertation. Basically, the plot will display how each latent ability found for Theory of Mind is affected by all the other abilities at previous times (we have information for three times). The process to find the latent abilities is not the main interest of the post, but it could be the topic for the next post :D. So let's get back to the point.
