@@ -6,7 +6,7 @@
 .page-header-post { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); }
 @media screen and (min-width: 64em) { .page-header-post { padding: 1rem 1rem 0rem 1rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .page-header-post { padding: 1rem 1rem 1rem 1rem; } }
-@media screen and (max-width: 42em) { .page-header-post { padding: 1rem 1rem 2rem 1rem; } }
+@media screen and (max-width: 42em) { .page-header-post { padding: 1rem 1rem 1rem 1rem; } }
 
 .page-header-main { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); }
 @media screen and (min-width: 64em) { .page-header-main { padding: 1rem 0rem; } }
