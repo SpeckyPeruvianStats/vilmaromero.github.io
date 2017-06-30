@@ -26,12 +26,121 @@ ggplot(data = diamonds, aes(x = carat, y = price)) +
     
     <item>
       <title>Causal Diagram</title>
-      <link>https://example.com/post/testing/</link>
+      <link>https://example.com/post/2017-02-14-causal-diagram/</link>
       <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/testing/</guid>
-      <description>&lt;p&gt;In this post, I would like to introduce a customized &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt; graphic that I did for my master dissertation. Basically, the plot will display how each latent ability found for Theory of Mind is affected by all the other abilities at previous times (we have information for three times). The process to find the latent abilities is not the main interest of the post, but it could be the topic for the next post :simple_smile: . So let’s get back to the point.&lt;/p&gt;
-&lt;p&gt;I :heart: Academic :smile:&lt;/p&gt;
+      <guid>https://example.com/post/2017-02-14-causal-diagram/</guid>
+      <description>&lt;p&gt;In this post, I would like to introduce a customized &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt; graphic that I did for my master dissertation. Basically, the plot will display how each latent ability found for Theory of Mind is affected by all the other abilities at previous times (we have information for three times). The process to find the latent abilities is not the main interest of the post, but it could be the topic for the next post :D. So let’s get back to the point.&lt;/p&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;p&gt;To obtain the data used for the path diagram, I employed a classical linear approach. Each latent ability at time 2 was regressed with all the abilities at time 1 including itself. Similarly, it was done for time 3 against time 2. Only the significant relations of each regression (p-value&amp;lt;0.05) were stored.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mydata &amp;lt;- read.table(&amp;quot;data_causal.txt&amp;quot;, header=TRUE, sep=&amp;quot;\t&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A small sample of the data is shown in the following table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;x&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;xend&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;y&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;yend&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;pval&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;rsq&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;x2&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;xend2&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;y2&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;yend2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.000017&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.403304&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.05&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.95&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;6.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;6.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.004950&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.403304&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.05&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.95&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5.05&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5.95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.041056&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.834008&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.05&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.95&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;4.80&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.834008&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.05&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.95&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;x&lt;/strong&gt; is the departure time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;xend&lt;/strong&gt; is the arrival time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;y&lt;/strong&gt; is the ability (eg. 6 = Non Verbal False Belief, 1 = Location Change) considered as dependent variable in the regression at time &lt;strong&gt;x&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;yend&lt;/strong&gt; is the ability considered as independent variable in the regression at time &lt;strong&gt;xend&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pval&lt;/strong&gt; is the p-value of the relation between &lt;strong&gt;y&lt;/strong&gt; and &lt;strong&gt;yend&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rsq&lt;/strong&gt; is the coefficient of determination (&lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt;) of the regression.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The last four variables (&lt;strong&gt;x2&lt;/strong&gt;, &lt;strong&gt;xend2&lt;/strong&gt;, &lt;strong&gt;y2&lt;/strong&gt;, &lt;strong&gt;yend2&lt;/strong&gt;) were created based on the first ones to have a better location to be considered in the plot.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Plot&lt;/h3&gt;
+&lt;p&gt;First, let’s define a function that will help us to choose a pretty color.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg_color_hue &amp;lt;- function(n) {
+  hues = seq(15, 375, length = n+1)
+  hcl(h = hues, l = 65, c = 100)[1:n]
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, the code for the causal diagram is as follows:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+
+ggplot(mydata) + 
+  geom_segment(aes(x = x2, y = y2, xend = xend2, yend = yend2, col = pval), alpha = 0.3, 
+               arrow = arrow(length = unit(0.15,&amp;quot;inches&amp;quot;)), size = 0.8) +
+  scale_color_gradient(high = &amp;quot;gray&amp;quot;, low = &amp;quot;black&amp;quot;, name = &amp;quot;p-value&amp;quot;) +
+  geom_point(aes(x = xend, y = yend, size = rsq), col = gg_color_hue(4)[1]) +
+  scale_x_continuous(breaks = 1:3) + 
+  scale_y_continuous(breaks = 1:6, labels = c(&amp;quot;Location Change&amp;quot;,&amp;quot;Narrative&amp;quot;,&amp;quot;Deceptive Box&amp;quot;,
+                                              &amp;quot;Verbal FB&amp;quot;,&amp;quot;Pretense, Desire, Think&amp;quot;,
+                                              &amp;quot;Non Verbal FB&amp;quot;)) + 
+  labs(x = &amp;quot;Time&amp;quot;, y = NULL)  +
+  guides(size = guide_legend(title = expression(R^2)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/post/2017-02-14-causal-diagram_files/figure-html/causal-diagram-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interpretation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Interpretation&lt;/h3&gt;
+&lt;p&gt;The red shaded circles stands for the goodness of fit, which in linear models is the &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt;, and it varies according to its value. Additionally, the darker the arrow is, the more significant becomes the precedent ability in explaining the respective latent ability at this time point.&lt;/p&gt;
+&lt;p&gt;It can be clearly seen that Pretense, Desire and Think can be explained at Time 2 by the same abilities and Non Verbal False Believe abilities had at Time 1. The same pattern is looked for Non Verbal False Belief at Time 2 which is summarised by its previous ability and the Pretense, Desire and Think ability at Time 1. However, these last causality is less accurate since its &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; value is smaller. Even though there is an arrow from Location Change ability at Time 1 to Verbal False Belief ability at Time 2 indicating causality, it is not that much significant (&lt;span class=&#34;math inline&#34;&gt;\(p-value \approx 0.05\)&lt;/span&gt;) and also the &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; is around 50 %. The remaining abilities at Time 2 are as well explained by themselves at Time 1.&lt;/p&gt;
+&lt;p&gt;At Time 3, all the abilities are caused by their previous time point value. The remarkable pattern is shown by Pretense, Desire and Think at Time 2 explaining three dimensions at Time 3 apart form itself: Non Verbal False Belief, Dceptive Box and Location Change. These last with not a strong p-value but it still having a good precision (&lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; around 0.8). Moreover, Non Verbal False Belief ability seem to be explained also by the Narrative factor, but the significance is almost at the boundary and can be because the p-values, in general, have not been adjusted for multiple comparison.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
