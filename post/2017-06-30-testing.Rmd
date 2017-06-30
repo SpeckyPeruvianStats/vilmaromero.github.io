@@ -1,0 +1,16 @@
+---
+title: testing
+author: ~
+date: '2017-06-30'
+slug: testing
+categories: []
+tags: []
+---
+
+```{r}
+library(ggplot2)
+
+ggplot(data = diamonds, aes(x = carat, y = price)) +
+  geom_point()
+```
+
