@@ -22,7 +22,7 @@ mydata <- read.table("/Users/susanaromero/Documents/REPOSITORIES/Blogdown-source
 ```
 
 ```{r, eval=FALSE}
-mydata <- read.table("data_causal.txt", header=TRUE, sep="\t")
+mydata <- read.table("data_causal.txt", header = TRUE, sep = "\t")
 ```
 
 A small sample of the data is shown in the following table:
