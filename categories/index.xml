@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on VR</title>
-    <link>/categories/</link>
-    <description>Recent content in Categories on VR</description>
+    <title>Categories on VILSURR</title>
+    <link>https://example.com/categories/</link>
+    <description>Recent content in Categories on VILSURR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Vilma Romero</copyright>
@@ -11,10 +11,10 @@
     
     <item>
       <title>R</title>
-      <link>/categories/r/</link>
+      <link>https://example.com/categories/r/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/categories/r/</guid>
+      <guid>https://example.com/categories/r/</guid>
       <description></description>
     </item>
     
