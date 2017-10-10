@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on vilsurr</title>
+    <title>Posts on Vilma Romero</title>
     <link>/post/</link>
-    <description>Recent content in Posts on vilsurr</description>
+    <description>Recent content in Posts on Vilma Romero</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Vilma Romero</copyright>
@@ -16,7 +16,7 @@
       <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>/post/2017-02-14-causal-diagram/</guid>
-      <description>&lt;p&gt;In this post, I would like to introduce a customized &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt; graphic that I did for my master dissertation. Basically, the plot will display how each latent ability found for Theory of Mind is affected by all the other abilities at previous times (we have information for three times). The process to find the latent abilities is not the main interest of the post, but it could be the topic for the next post :D. So let’s get back to the point.&lt;/p&gt;
+      <description>&lt;p&gt;In this post, I would like to introduce a customized &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt; graphic that I did for my master dissertation. Basically, the plot will display how each latent ability found for Theory of Mind is affected by all the other abilities at previous times (we have information for three times). The process to find the latent abilities is not the main interest of the post, but it could be the topic for the next post. So let’s get back to the point.&lt;/p&gt;
 &lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data&lt;/h3&gt;
 &lt;p&gt;To obtain the data used for the path diagram, I employed a classical linear approach. Each latent ability at time 2 was regressed with all the abilities at time 1 including itself. Similarly, it was done for time 3 against time 2. Only the significant relations of each regression (p-value&amp;lt;0.05) were stored.&lt;/p&gt;
