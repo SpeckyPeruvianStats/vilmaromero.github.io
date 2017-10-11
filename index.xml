@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Longitudinal Multidimensional Item Response Modelling in Preschool Children&#39;s Mental State Understanding</title>
+      <link>/talk/cipefa-talk/</link>
+      <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/cipefa-talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Causal Diagram</title>
       <link>/post/2017-02-14-causal-diagram/</link>
       <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
@@ -128,6 +137,15 @@ ggplot(mydata) +
 &lt;p&gt;At Time 3, all the abilities are caused by their previous time point value. The remarkable pattern is shown by Pretense, Desire and Think at Time 2 explaining three dimensions at Time 3 apart form itself: Non Verbal False Belief, Dceptive Box and Location Change. These last with not a strong p-value but it still having a good precision (&lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; around 0.8). Moreover, Non Verbal False Belief ability seem to be explained also by the Narrative factor, but the significance is almost at the boundary and can be because the p-values, in general, have not been adjusted for multiple comparison.&lt;/p&gt;
 &lt;/div&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Identifying prey capture attempts using accelerometry data in South American fur seals</title>
+      <link>/talk/concimar-talk/</link>
+      <pubDate>Fri, 27 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/concimar-talk/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks on VILSURR</title>
+    <title>Recent &amp; Upcoming Talks on Vilma Romero</title>
     <link>/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on VILSURR</description>
+    <description>Recent content in Recent &amp; Upcoming Talks on Vilma Romero</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Vilma Romero</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Longitudinal Multidimensional Item Response Modelling in Preschool Children&#39;s Mental State Understanding</title>
+      <link>/talk/cipefa-talk/</link>
+      <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/cipefa-talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identifying prey capture attempts using accelerometry data in South American fur seals</title>
+      <link>/talk/concimar-talk/</link>
+      <pubDate>Fri, 27 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/concimar-talk/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
