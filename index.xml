@@ -31,6 +31,7 @@
 &lt;p&gt;To obtain the data used for the path diagram, I employed a classical linear approach. Each latent ability at time 2 was regressed with all the abilities at time 1 including itself. Similarly, it was done for time 3 against time 2. Only the significant relations of each regression (p-value&amp;lt;0.05) were stored.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mydata &amp;lt;- read.table(&amp;quot;data_causal.txt&amp;quot;, header = TRUE, sep = &amp;quot;\t&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;A small sample of the data is shown in the following table:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;knitr&amp;#39; was built under R version 3.4.1&lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
