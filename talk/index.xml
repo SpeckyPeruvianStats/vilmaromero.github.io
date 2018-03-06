@@ -11,6 +11,15 @@
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>My journey in Data Science</title>
+      <link>/talk/wids-talk/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/wids-talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Longitudinal Multidimensional Item Response Modelling in Preschool Children&#39;s Mental State Understanding</title>
       <link>/talk/cipefa-talk/</link>
       <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
