@@ -1,0 +1,42 @@
+---
+title: Home
+name: Erick A. Chacon
+date: 2017-02-20T15:26:23-06:00
+menu:
+  header:
+    name: name to test
+    title: title to test
+
+categories: [one]
+tags: [two,three,four]
+interests: [
+    "Spatial and Spatio-Temporal Modelling",
+    "Bayesian Statistics",
+    "Computational Intensive Methods",
+    "Big Data Methods for Statistics",
+    "Data Visualization"
+  ]
+applications: [
+    "Epidemiology",
+    "Climate Change",
+    "Extreme Events",
+    "Others Complex Systems"
+  ]
+education:
+  first:
+    course: PhD in Statistics and Epidemiology
+    university: Lancaster University
+    years: 2016 - 2019
+  second:
+    course: MSc in Statistics
+    university: Lancaster University
+    years: 2015 - 2016
+  third:
+    course: BSc in Engineering Statistics
+    university: Universidad Nacional de Ingeniería
+    years: 2008 - 2013
+---
+
+This is my personal webpage and blog.
+I am a PhD student in Statistics and Epidemiology in the Faculty of Health and Medicine at [Lancaster University](http://www.lancaster.ac.uk/) supervised by [Dr. Benjamin Taylor](http://www.lancaster.ac.uk/staff/taylorb1/) and [Dr. Luke Parry](http://www.lancaster.ac.uk/lec/about-us/people/luke-parry). I work in the research group called [CHICAS](http://chicas.lancaster-university.uk/) (Centre for Health, Informatics, Computing and Statistics). Previously, I obtained my Master of Science degree in Statistics at Lancaster University and my Bachelor and Engineering degree at [Universidad Nacional de Ingeniería](http://www.uni.edu.pe/).
+
